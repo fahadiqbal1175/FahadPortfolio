@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  background-color: #0A0F0D;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #D7E2EA;
+  overflow-x: clip;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  line-height: 1.6;
+}
+
+/* Gradient heading text — same technique as Jack's .hero-heading */
+.hero-heading {
+  background: linear-gradient(180deg, #4A5568 0%, #A0BECF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Emerald gradient heading variant */
+.hero-heading-emerald {
+  background: linear-gradient(180deg, #2D7A5E 0%, #52E2B1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0F0D;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a2f28;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #52E2B1;
+}
+
+/* Selection */
+::selection {
+  background: rgba(82, 226, 177, 0.3);
+  color: white;
+}

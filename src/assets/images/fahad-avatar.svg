@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrated avatar placeholder for Fahad Iqbal</title>
+  <desc id="desc">A realistic illustrated professional avatar placeholder with AI themed background elements.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d211d"/>
+      <stop offset="0.55" stop-color="#102820"/>
+      <stop offset="1" stop-color="#07100f"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c88758"/>
+      <stop offset="1" stop-color="#9f5f3e"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dce7e1"/>
+      <stop offset="1" stop-color="#a9bbb3"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#000000" flood-opacity="0.34"/>
+    </filter>
+  </defs>
+
+  <rect width="720" height="720" fill="url(#bg)"/>
+  <path d="M60 146h600M60 288h600M60 430h600M60 572h600" stroke="#bfe5d5" stroke-opacity="0.08"/>
+  <path d="M146 60v600M288 60v600M430 60v600M572 60v600" stroke="#bfe5d5" stroke-opacity="0.08"/>
+  <g opacity="0.8">
+    <circle cx="154" cy="174" r="8" fill="#52e2b1"/>
+    <circle cx="565" cy="150" r="7" fill="#47c8ff"/>
+    <circle cx="596" cy="492" r="8" fill="#f1c96b"/>
+    <circle cx="124" cy="520" r="6" fill="#52e2b1"/>
+    <path d="M154 174C250 130 352 132 448 198S535 310 596 492" fill="none" stroke="#52e2b1" stroke-width="3" stroke-opacity="0.35"/>
+    <path d="M124 520C218 465 279 470 360 512s148 42 236-20" fill="none" stroke="#47c8ff" stroke-width="3" stroke-opacity="0.34"/>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <path d="M190 676c11-112 87-177 170-177s159 65 170 177H190z" fill="#132722"/>
+    <path d="M252 676c8-79 51-126 108-126s100 47 108 126H252z" fill="url(#shirt)"/>
+    <path d="M274 562l86 112 86-112c-22-17-51-27-86-27s-64 10-86 27z" fill="#eef5f0"/>
+    <path d="M314 522h92v80c0 24-18 44-46 44s-46-20-46-44v-80z" fill="#a96542"/>
+    <path d="M244 322c0-88 48-154 116-154s116 66 116 154c0 109-55 188-116 188s-116-79-116-188z" fill="url(#skin)"/>
+    <path d="M242 321c3-101 50-164 119-164 72 0 114 61 119 164-27-17-43-47-54-84-39 30-93 42-166 41-7 15-13 29-18 43z" fill="#17120f"/>
+    <path d="M244 337c-19-2-34 14-30 39 4 28 24 45 43 42l-13-81z" fill="#9f5f3e"/>
+    <path d="M476 337c19-2 34 14 30 39-4 28-24 45-43 42l13-81z" fill="#9f5f3e"/>
+    <path d="M310 352c12-9 32-9 44 0" fill="none" stroke="#291d18" stroke-width="8" stroke-linecap="round"/>
+    <path d="M367 352c12-9 32-9 44 0" fill="none" stroke="#291d18" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="333" cy="376" r="7" fill="#16100e"/>
+    <circle cx="388" cy="376" r="7" fill="#16100e"/>
+    <path d="M361 380c-6 25-14 45-24 59 13 8 31 8 45 0" fill="none" stroke="#7b462e" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M323 459c22 20 54 20 76 0" fill="none" stroke="#522e24" stroke-width="7" stroke-linecap="round"/>
+    <path d="M286 315c-2-58 28-103 74-112 58-11 101 27 102 96-28-26-65-38-112-36-30 1-52 18-64 52z" fill="#201713"/>
+    <path d="M287 309c22-49 70-73 140-62" fill="none" stroke="#34231b" stroke-width="20" stroke-linecap="round"/>
+    <path d="M301 632h118l-59 44-59-44z" fill="#10201d" opacity="0.7"/>
+  </g>
+
+  <rect x="26" y="26" width="668" height="668" rx="20" fill="none" stroke="#52e2b1" stroke-opacity="0.36"/>
+</svg>
