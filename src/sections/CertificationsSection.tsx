@@ -12,22 +12,23 @@ export default function CertificationsSection() {
         CERTIFICATIONS
       </h2>
 
-      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
         {certifications.map((cert, index) => (
-          <FadeIn key={index} delay={index * 0.15}>
-            <div className="rounded-[30px] border-2 border-[#D7E2EA]/20 bg-[#D7E2EA]/5 p-6 sm:p-8 backdrop-blur-sm h-full flex flex-col">
-              {cert.image ? (
-                <img src={cert.image} alt={cert.title} className="rounded-xl mb-4 w-full h-40 object-cover" />
-              ) : (
-                <div className="h-32 mb-4 flex items-center justify-center text-5xl opacity-30">
-                  🏆
-                </div>
-              )}
-              <h3 className="text-[#D7E2EA] font-bold text-lg sm:text-xl mb-2">{cert.title}</h3>
-              <p className="text-[#D7E2EA]/60 font-mono text-sm">{cert.issuer}</p>
-              {cert.code && (
-                <p className="text-[#52E2B1] font-mono text-sm mt-1">{cert.code}</p>
-              )}
+          <FadeIn key={index} delay={index * 0.12}>
+            <div className="rounded-[24px] sm:rounded-[30px] border-2 border-[#D7E2EA]/20 bg-[#D7E2EA]/5 overflow-hidden h-full flex flex-col backdrop-blur-sm">
+              <img 
+                src={cert.image} 
+                alt={cert.title} 
+                className="w-full h-48 sm:h-56 object-cover object-top" 
+                loading="lazy"
+              />
+              <div className="p-5 sm:p-6 flex flex-col gap-1.5 flex-1">
+                <h3 className="text-[#D7E2EA] font-bold text-base sm:text-lg leading-snug">{cert.title}</h3>
+                <p className="text-[#D7E2EA]/60 font-mono text-sm">{cert.issuer}</p>
+                {cert.code && (
+                  <p className="text-[#52E2B1] font-mono text-sm mt-auto pt-2">{cert.code}</p>
+                )}
+              </div>
             </div>
           </FadeIn>
         ))}

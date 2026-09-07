@@ -1,4 +1,4 @@
-export interface ProjectImage {
+﻿export interface ProjectImage {
   src: string
   alt: string
 }
@@ -23,16 +23,16 @@ export const projects: Project[] = [
     col1Images: [
       {
         src: '',
-        alt: 'MediLens — Real-time pill detection with YOLOv11',
+        alt: 'MediLens  - Real-time pill detection with YOLOv11',
       },
       {
         src: '',
-        alt: 'MediLens — Prescription OCR pipeline',
+        alt: 'MediLens  - Prescription OCR pipeline',
       },
     ],
     col2Image: {
       src: '',
-      alt: 'MediLens — Medication assistant app interface',
+      alt: 'MediLens  - Medication assistant app interface',
     },
   },
   {
@@ -44,16 +44,16 @@ export const projects: Project[] = [
     col1Images: [
       {
         src: '',
-        alt: 'MovieLens — Recommendation engine UI',
+        alt: 'MovieLens  - Recommendation engine UI',
       },
       {
         src: '',
-        alt: 'MovieLens — ALS model evaluation metrics',
+        alt: 'MovieLens  - ALS model evaluation metrics',
       },
     ],
     col2Image: {
       src: '',
-      alt: 'MovieLens — FastAPI + Docker deployment',
+      alt: 'MovieLens  - FastAPI + Docker deployment',
     },
   },
   {
@@ -65,16 +65,16 @@ export const projects: Project[] = [
     col1Images: [
       {
         src: '',
-        alt: 'WellPulse — Health AI project preview',
+        alt: 'WellPulse  - Health AI project preview',
       },
       {
         src: '',
-        alt: 'WellPulse — Model architecture preview',
+        alt: 'WellPulse  - Model architecture preview',
       },
     ],
     col2Image: {
       src: '',
-      alt: 'WellPulse — Application preview',
+      alt: 'WellPulse  - Application preview',
     },
   },
 ]

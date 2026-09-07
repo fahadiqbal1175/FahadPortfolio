@@ -27,12 +27,12 @@ export const skills = [
     number: '05',
     name: 'Full-Stack Engineering',
     description:
-      'React.js, Node.js, Express, MongoDB — building the MERN interfaces and APIs that serve ML models to real users.',
+      'React.js, Node.js, Express, MongoDB, building the MERN interfaces and APIs that serve ML models to real users.',
   },
   {
     number: '06',
     name: 'Data & Databases',
     description:
-      'Python, pandas workflows, MongoDB, MySQL, Oracle DB — data pipelines, storage, and SQL-backed applications for ML systems.',
+      'Python, pandas workflows, MongoDB, MySQL, Oracle DB, data pipelines, storage, and SQL-backed applications for ML systems.',
   },
 ]

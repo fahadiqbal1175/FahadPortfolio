@@ -77,7 +77,7 @@ export default function ContactSection() {
               </a>
             </div>
             
-            <a href="/assets/documents/Fahad_Iqbal_Resume.docx" download className="text-[#D7E2EA]/60 text-sm font-mono hover:text-[#52E2B1]">
+            <a href="/assets/documents/Fahad_Iqbal_Resume.pdf" download className="text-[#D7E2EA]/60 text-sm font-mono hover:text-[#52E2B1] transition-colors">
               ↓ Download Resume
             </a>
           </div>

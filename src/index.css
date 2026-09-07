@@ -1,4 +1,4 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -25,7 +25,7 @@ body {
   line-height: 1.6;
 }
 
-/* Gradient heading text — same technique as Jack's .hero-heading */
+/* Gradient heading text | same technique as Jack's .hero-heading */
 .hero-heading {
   background: linear-gradient(180deg, #4A5568 0%, #A0BECF 100%);
   -webkit-background-clip: text;

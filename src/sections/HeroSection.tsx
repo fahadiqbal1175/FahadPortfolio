@@ -34,7 +34,7 @@ export default function HeroSection() {
         <div className="flex justify-between items-end pb-7 sm:pb-8 md:pb-10">
           <FadeIn delay={0.35} y={20}>
             <p className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[160px] sm:max-w-[220px] md:max-w-[260px]" style={{ fontSize: 'clamp(0.75rem, 1.4vw, 1.5rem)' }}>
-              building practical AI systems — from computer vision to deployed recommendation engines
+              building practical AI systems, from computer vision to deployed recommendation engines
             </p>
           </FadeIn>
 
@@ -48,7 +48,7 @@ export default function HeroSection() {
           <Magnet padding={120} strength={3}>
             <img
               src={avatarImg}
-              alt="Fahad Iqbal — AI/ML Engineer"
+              alt="Fahad Iqbal | AI/ML Engineer"
               className="w-[260px] sm:w-[340px] md:w-[420px] lg:w-[500px] rounded-2xl object-cover"
               style={{ filter: 'drop-shadow(0 0 40px rgba(82, 226, 177, 0.15))' }}
             />
