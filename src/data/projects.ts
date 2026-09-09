@@ -2,12 +2,15 @@
   src: string
   alt: string
   mediaType?: 'image' | 'video' | 'gif'
+  youtubeUrl?: string
 }
 
 export interface Project {
+  slug: string
   number: string
   category: string
   name: string
+  description: string
   link?: string
   linkLabel?: string
   col1Images: ProjectImage[]
@@ -16,9 +19,11 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: 'medilens',
     number: '01',
     category: 'Team Lead & AI Engineer',
     name: 'MediLens',
+    description: 'A medication assistant that combines real-time pill detection with prescription OCR to make everyday medication management more reliable.',
     link: 'https://github.com/Wcoder547/MediLens.git',
     linkLabel: 'GitHub',
     col1Images: [
@@ -39,9 +44,11 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: 'movielens-recommender',
     number: '02',
     category: 'Solo Project',
     name: 'MovieLens Recommender',
+    description: 'A recommendation engine that turns movie preferences into personalized suggestions through an accessible FastAPI-powered interface.',
     link: 'https://movielens-recommender-a4je.onrender.com/',
     linkLabel: 'Live Demo',
     col1Images: [
@@ -61,9 +68,11 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: 'wellpulse',
     number: '03',
     category: 'In Progress',
     name: 'WellPulse',
+    description: 'An in-progress health AI project focused on making useful wellness insights easier to understand and act on.',
     link: 'https://github.com/fahadiqbal1175/wellpulse_ml_project',
     linkLabel: 'GitHub',
     col1Images: [

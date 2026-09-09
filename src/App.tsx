@@ -1,13 +1,30 @@
+import { useEffect, useState } from 'react'
 import HeroSection from './sections/HeroSection'
 import MarqueeSection from './sections/MarqueeSection'
 import AboutSection from './sections/AboutSection'
 import EducationSection from './sections/EducationSection'
 import SkillsSection from './sections/SkillsSection'
-import ProjectsSection from './sections/ProjectsSection'
+import ProjectsSection, { ProjectDetail } from './sections/ProjectsSection'
+import { projects } from './data/projects'
 import CertificationsSection from './sections/CertificationsSection'
 import ContactSection from './sections/ContactSection'
 
+function getProjectFromHash() {
+  const slug = window.location.hash.startsWith('#project/') ? window.location.hash.slice('#project/'.length) : ''
+  return projects.find((project) => project.slug === slug)
+}
+
 export default function App() {
+  const [selectedProject, setSelectedProject] = useState(() => getProjectFromHash())
+
+  useEffect(() => {
+    const handleHashChange = () => setSelectedProject(getProjectFromHash())
+    window.addEventListener('hashchange', handleHashChange)
+    return () => window.removeEventListener('hashchange', handleHashChange)
+  }, [])
+
+  if (selectedProject) return <ProjectDetail project={selectedProject} />
+
   return (
     <div style={{ overflowX: 'clip' }}>
       <HeroSection />
