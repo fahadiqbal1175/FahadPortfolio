@@ -1,6 +1,7 @@
 ﻿export interface ProjectImage {
   src: string
   alt: string
+  mediaType?: 'image' | 'video' | 'gif'
 }
 
 export interface Project {
@@ -22,12 +23,14 @@ export const projects: Project[] = [
     linkLabel: 'GitHub',
     col1Images: [
       {
-        src: '',
+        src: '/assets/videos/medilens-demo-1.mp4',
         alt: 'MediLens - Real-time pill detection with YOLOv11',
+        mediaType: 'video',
       },
       {
-        src: '',
+        src: '/assets/videos/medilens-demo-2.mp4',
         alt: 'MediLens - Prescription OCR pipeline',
+        mediaType: 'video',
       },
     ],
     col2Image: {
@@ -52,16 +55,17 @@ export const projects: Project[] = [
       },
     ],
     col2Image: {
-      src: '',
+      src: '/assets/videos/movielens_recommender.gif',
       alt: 'MovieLens - FastAPI + Docker deployment',
+      mediaType: 'gif',
     },
   },
   {
     number: '03',
     category: 'In Progress',
     name: 'WellPulse',
-    link: undefined,
-    linkLabel: 'Coming Soon',
+    link: 'https://github.com/fahadiqbal1175/wellpulse_ml_project',
+    linkLabel: 'GitHub',
     col1Images: [
       {
         src: '',
