@@ -22,12 +22,15 @@ export default function CertificationsSection() {
                 rel="noopener noreferrer"
                 aria-label={`Open ${cert.title} image in a new tab`}
               >
-                <img 
-                  src={cert.image} 
-                  alt={cert.title} 
-                  className="w-full h-48 sm:h-56 object-cover object-top" 
-                  loading="lazy"
-                />
+                <div className="aspect-[16/10] w-full bg-[#D7E2EA]/5">
+                  <img
+                    src={cert.image}
+                    alt={cert.title}
+                    className="h-full w-full object-cover object-top"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
               </a>
               <div className="p-5 sm:p-6 flex flex-col gap-1.5 flex-1">
                 <h3 className="text-[#D7E2EA] font-bold text-base sm:text-lg leading-snug">{cert.title}</h3>
