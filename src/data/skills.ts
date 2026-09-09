@@ -9,19 +9,19 @@ export const skills = [
     number: '02',
     name: 'NLP & GenAI',
     description:
-      'Named Entity Recognition, prescription parsing with Donut OCR, Gemini API prompt engineering, and structured medication data extraction.',
+      'Named Entity Recognition, prescription parsing with OCR, prompt engineering, and structured medication data extraction.',
   },
   {
     number: '03',
     name: 'Recommender Systems',
     description:
-      'Collaborative filtering with ALS, ranking evaluation with Precision@K, Recall@K, and NDCG@K, cold-start strategies, and production memory optimization.',
+      'Collaborative filtering with ALS, ranking evaluation with Precision@K, Recall@K, and NDCG@K, and production memory optimization.',
   },
   {
     number: '04',
     name: 'ML Deployment',
     description:
-      'FastAPI backends, Docker containerization, REST API design, memory profiling, debugging production issues, and public demo hosting on Render.',
+      'FastAPI backends, Docker containerization, REST API design, memory profiling, debugging production issues, and public demo hosting.',
   },
   {
     number: '05',

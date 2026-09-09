@@ -24,7 +24,7 @@ export default function App() {
             © {new Date().getFullYear()} Fahad Iqbal
           </span>
           <span className="text-silver/40 text-sm font-mono">
-            AI/ML Engineer Portfolio
+            AI/ML Engineer
           </span>
         </div>
       </footer>

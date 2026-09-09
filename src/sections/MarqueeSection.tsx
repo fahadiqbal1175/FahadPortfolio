@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 
-const row1Labels = ['YOLOv11', 'PyTorch', 'FastAPI', 'Docker', 'OpenCV', 'TensorFlow', 'Gemini API', 'React.js', 'MongoDB', 'Python']
-const row2Labels = ['Donut OCR', 'Ultralytics', 'Node.js', 'Express', 'Kotlin', 'MySQL', 'Pandas', 'Git', 'AWS', 'Postman']
+const row1Labels = ['PyTorch', 'FastAPI', 'Docker', 'TensorFlow', 'Python']
+const row2Labels = ['Pandas', 'Git', 'AWS', 'Node.js', 'MySQL']
 
 // Triple the labels for seamless loop
 const row1 = [...row1Labels, ...row1Labels, ...row1Labels]

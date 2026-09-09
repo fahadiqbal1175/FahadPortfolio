@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
           <span className="w-9 h-9 flex items-center justify-center rounded-md border border-emerald/40 bg-gradient-to-br from-emerald/15 to-cyan/10 text-emerald font-mono font-black text-sm">
             FI
           </span>
-          <span className="hidden sm:inline">Fahad</span>
+          <span className="hidden sm:inline">Fahad Iqbal</span>
         </a>
 
         {/* Desktop Menu */}
