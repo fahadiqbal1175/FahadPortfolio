@@ -16,12 +16,19 @@ export default function CertificationsSection() {
         {certifications.map((cert, index) => (
           <FadeIn key={index} delay={index * 0.12}>
             <div className="rounded-[24px] sm:rounded-[30px] border-2 border-[#D7E2EA]/20 bg-[#D7E2EA]/5 overflow-hidden h-full flex flex-col backdrop-blur-sm">
-              <img 
-                src={cert.image} 
-                alt={cert.title} 
-                className="w-full h-48 sm:h-56 object-cover object-top" 
-                loading="lazy"
-              />
+              <a
+                href={cert.image}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open ${cert.title} image in a new tab`}
+              >
+                <img 
+                  src={cert.image} 
+                  alt={cert.title} 
+                  className="w-full h-48 sm:h-56 object-cover object-top" 
+                  loading="lazy"
+                />
+              </a>
               <div className="p-5 sm:p-6 flex flex-col gap-1.5 flex-1">
                 <h3 className="text-[#D7E2EA] font-bold text-base sm:text-lg leading-snug">{cert.title}</h3>
                 <p className="text-[#D7E2EA]/60 font-mono text-sm">{cert.issuer}</p>

@@ -1,9 +1,38 @@
 import React, { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import GhostButton from '../components/GhostButton'
-import { projects } from '../data/projects'
+import { projects, type Project, type ProjectImage } from '../data/projects'
 
-function ProjectCard({ project, index, total }: { project: any, index: number, total: number }) {
+function ProjectMedia({ media, className }: { media: ProjectImage; className: string }) {
+  if (!media.src) {
+    return (
+      <div className="w-full h-full bg-gradient-to-br from-[#52E2B1]/10 to-[#47C8FF]/10 border border-[#D7E2EA]/10 flex items-center justify-center text-[#D7E2EA]/30 text-sm font-mono text-center p-2">
+        {media.alt || 'Project preview unavailable'}
+      </div>
+    )
+  }
+
+  if (media.mediaType === 'video') {
+    return (
+      <video
+        src={media.src}
+        aria-label={media.alt}
+        className={className}
+        autoPlay
+        muted
+        loop
+        playsInline
+        controls
+      >
+        {media.alt}
+      </video>
+    )
+  }
+
+  return <img src={media.src} alt={media.alt} className={className} />
+}
+
+function ProjectCard({ project, index, total }: { project: Project, index: number, total: number }) {
   const containerRef = useRef<HTMLDivElement>(null)
   
   const { scrollYProgress } = useScroll({
@@ -41,33 +70,15 @@ function ProjectCard({ project, index, total }: { project: any, index: number, t
         <div className="flex gap-3 sm:gap-4 flex-1">
           <div className="w-[40%] flex flex-col gap-3 sm:gap-4 h-full">
             <div className="rounded-[30px] sm:rounded-[40px] md:rounded-[50px] overflow-hidden relative" style={{ height: 'clamp(130px, 16vw, 230px)' }}>
-              {project.col1Images?.[0]?.src ? (
-                <img src={project.col1Images[0].src} alt={project.col1Images[0].alt} className="object-cover w-full h-full" />
-              ) : (
-                <div className="w-full h-full bg-gradient-to-br from-[#52E2B1]/10 to-[#47C8FF]/10 border border-[#D7E2EA]/10 flex items-center justify-center text-[#D7E2EA]/30 text-sm font-mono text-center p-2">
-                  {project.col1Images?.[0]?.alt || 'Placeholder'}
-                </div>
-              )}
+              <ProjectMedia media={project.col1Images[0]} className="object-cover w-full h-full" />
             </div>
             <div className="rounded-[30px] sm:rounded-[40px] md:rounded-[50px] overflow-hidden relative flex-1" style={{ minHeight: 'clamp(160px, 22vw, 340px)' }}>
-              {project.col1Images?.[1]?.src ? (
-                <img src={project.col1Images[1].src} alt={project.col1Images[1].alt} className="object-cover w-full h-full" />
-              ) : (
-                <div className="w-full h-full bg-gradient-to-br from-[#52E2B1]/10 to-[#47C8FF]/10 border border-[#D7E2EA]/10 flex items-center justify-center text-[#D7E2EA]/30 text-sm font-mono text-center p-2">
-                  {project.col1Images?.[1]?.alt || 'Placeholder'}
-                </div>
-              )}
+              <ProjectMedia media={project.col1Images[1]} className="object-cover w-full h-full" />
             </div>
           </div>
           
           <div className="w-[60%] rounded-[30px] sm:rounded-[40px] md:rounded-[50px] overflow-hidden relative h-full">
-            {project.col2Image?.src ? (
-              <img src={project.col2Image.src} alt={project.col2Image.alt} className="object-cover w-full h-full" />
-            ) : (
-              <div className="w-full h-full bg-gradient-to-br from-[#52E2B1]/10 to-[#47C8FF]/10 border border-[#D7E2EA]/10 flex items-center justify-center text-[#D7E2EA]/30 text-sm font-mono text-center p-2">
-                {project.col2Image?.alt || 'Placeholder'}
-              </div>
-            )}
+            <ProjectMedia media={project.col2Image} className="object-cover w-full h-full" />
           </div>
         </div>
       </motion.div>
