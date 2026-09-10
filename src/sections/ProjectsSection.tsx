@@ -5,11 +5,11 @@ import ProjectVisual from '../components/ProjectVisual'
 import { projects, type Project, type ProjectMedia } from '../data/projects'
 
 function ProjectArtwork({ project }: { project: Project }) {
-  return <ProjectVisual variant={project.visualVariant} />
+  return <ProjectVisual variant={project.visualVariant} name={project.name} />
 }
 
 function ProjectCardVisual({ project }: { project: Project }) {
-  return <ProjectVisual variant={project.visualVariant} />
+  return <ProjectVisual variant={project.visualVariant} name={project.name} />
 }
 
 function ProjectLinks({ project }: { project: Project }) {
