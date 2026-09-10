@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import GhostButton from '../components/GhostButton'
+import ProjectVisual from '../components/ProjectVisual'
 import { projects, type Project, type ProjectMedia } from '../data/projects'
 
 const posterTreatments = [
@@ -18,6 +19,10 @@ function ProjectArtwork({ project, index }: { project: Project; index: number })
   )
 }
 
+function ProjectCardVisual({ project }: { project: Project }) {
+  return <ProjectVisual variant={project.visualVariant} />
+}
+
 function ProjectLinks({ project }: { project: Project }) {
   return (
     <div className="flex flex-wrap items-center gap-3">
@@ -30,14 +35,14 @@ function ProjectLinks({ project }: { project: Project }) {
   )
 }
 
-function ProjectCard({ project, index }: { project: Project; index: number }) {
+function ProjectCard({ project }: { project: Project }) {
   const containerRef = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ['start 90%', 'start 45%'] })
   const y = useTransform(scrollYProgress, [0, 1], [24, 0])
 
   return (
     <motion.article ref={containerRef} style={{ y }} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }} className="grid gap-5 rounded-[36px] border-2 border-[#D7E2EA]/20 bg-[#0A0F0D] p-4 sm:gap-7 sm:p-6 md:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] md:items-center md:p-8">
-      <ProjectArtwork project={project} index={index} />
+      <ProjectCardVisual project={project} />
       <div className="flex min-w-0 h-full flex-col justify-between gap-8 p-1 sm:p-3">
         <div>
           <div className="mb-5 flex items-center justify-between gap-4">
@@ -117,5 +122,5 @@ export function ProjectDetail({ project }: { project: Project }) {
 }
 
 export default function ProjectsSection() {
-  return <section id="projects" className="relative z-10 -mt-10 rounded-t-[40px] bg-[#0A0F0D] px-5 py-20 sm:-mt-12 sm:rounded-t-[50px] sm:px-8 sm:py-24 md:-mt-14 md:rounded-t-[60px] md:px-10 md:py-32"><h2 className="hero-heading mb-16 text-center font-black uppercase sm:mb-20 md:mb-28" style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}>PROJECTS</h2><div className="mx-auto grid max-w-6xl gap-6">{projects.map((project, index) => <ProjectCard key={project.slug} project={project} index={index} />)}</div></section>
+  return <section id="projects" className="relative z-10 -mt-10 rounded-t-[40px] bg-[#0A0F0D] px-5 py-20 sm:-mt-12 sm:rounded-t-[50px] sm:px-8 sm:py-24 md:-mt-14 md:rounded-t-[60px] md:px-10 md:py-32"><h2 className="hero-heading mb-16 text-center font-black uppercase sm:mb-20 md:mb-28" style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}>PROJECTS</h2><div className="mx-auto grid max-w-6xl gap-6">{projects.map((project) => <ProjectCard key={project.slug} project={project} />)}</div></section>
 }
