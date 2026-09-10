@@ -23,6 +23,8 @@ export interface ProjectSections {
   results: string[]
 }
 
+export type ProjectVisualVariant = 'medilens' | 'movielens' | 'wellpulse'
+
 export interface Project {
   slug: string
   number: string
@@ -31,6 +33,7 @@ export interface Project {
   description: string
   artwork: string
   artworkAlt: string
+  visualVariant: ProjectVisualVariant
   links: ProjectLink[]
   media: ProjectMedia
   sections: ProjectSections
@@ -45,6 +48,7 @@ export const projects: Project[] = [
     description: 'An AI-powered medication assistant that turns pill detection and prescription scanning into a reliable daily routine.',
     artwork: mediLensArtwork,
     artworkAlt: 'MediLens illustration with pills, phone, and prescription',
+    visualVariant: 'medilens',
     links: [
       { href: 'https://github.com/Wcoder547/MediLens.git', label: 'GitHub' },
       { href: 'https://youtu.be/_Fszlqpgr1g', label: 'Demo Video' },
@@ -83,6 +87,7 @@ export const projects: Project[] = [
     description: 'A production-style recommendation system shipped as a tested FastAPI service with a live demo.',
     artwork: movieLensArtwork,
     artworkAlt: 'MovieLens illustration with laptop and media recommendations',
+    visualVariant: 'movielens',
     links: [
       { href: 'https://github.com/fahadiqbal1175/movielens-recommender_ml_project', label: 'GitHub' },
       { href: 'https://movielens-recommender-a4je.onrender.com/', label: 'Live Demo' },
@@ -127,6 +132,7 @@ export const projects: Project[] = [
     description: 'An ML-first wellbeing pipeline with explainable predictions and production-minded MLOps.',
     artwork: wellPulseArtwork,
     artworkAlt: 'WellPulse illustration with laptop and wellbeing gauge',
+    visualVariant: 'wellpulse',
     links: [
       { href: 'https://github.com/fahadiqbal1175/wellpulse_ml_project', label: 'GitHub' },
       { label: 'Live Demo — Coming Soon', disabled: true },
