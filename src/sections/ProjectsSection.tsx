@@ -9,9 +9,9 @@ const posterTreatments = [
   'from-[#3a2d18] via-[#21170e] to-[#0A0F0D]',
 ]
 
-function ProjectArtwork({ project, index, compact = false }: { project: Project; index: number; compact?: boolean }) {
+function ProjectArtwork({ project, index }: { project: Project; index: number }) {
   return (
-    <div className={`group relative isolate aspect-[4/3] w-full overflow-hidden rounded-[28px] border border-[#D7E2EA]/15 bg-gradient-to-br ${posterTreatments[index % posterTreatments.length]} ${compact ? 'max-h-64' : ''}`}>
+    <div className={`group relative isolate mx-auto aspect-[4/3] w-full max-w-2xl overflow-hidden rounded-[28px] border border-[#D7E2EA]/15 bg-gradient-to-br ${posterTreatments[index % posterTreatments.length]}`}>
       <img src={project.artwork} alt={project.artworkAlt} className="absolute inset-0 h-full w-full object-contain p-5 opacity-90 transition-transform duration-500 group-hover:scale-105 sm:p-8" loading="lazy" decoding="async" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-white/5 via-transparent to-[#0A0F0D]/40" />
     </div>
@@ -92,7 +92,7 @@ export function ProjectDetail({ project }: { project: Project }) {
         <a href="#projects" className="inline-flex rounded-full border border-[#D7E2EA]/30 px-4 py-2 text-sm uppercase tracking-[0.14em] text-[#D7E2EA]/75 transition-colors hover:border-[#52E2B1] hover:text-[#52E2B1] focus:outline-none focus:ring-2 focus:ring-[#52E2B1]">← Back to Projects</a>
         <div className="mt-14 grid min-w-0 gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:items-start">
           <div className="min-w-0 max-w-full">
-            <ProjectArtwork project={project} index={projects.indexOf(project)} compact />
+            <ProjectArtwork project={project} index={projects.indexOf(project)} />
             <span className="mt-8 block break-words font-mono text-sm tracking-[0.2em] text-[#52E2B1]">{project.number} / {project.category}</span>
             <h1 className="mt-5 max-w-full break-words text-[clamp(2.75rem,7vw,5.5rem)] font-black uppercase leading-[0.95]">{project.name}</h1>
             <p className="mt-6 max-w-prose text-lg leading-8 text-[#D7E2EA]/70">{project.description}</p>
