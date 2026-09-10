@@ -2,6 +2,7 @@ import certAzure from '../assets/images/cert-azure.jpg'
 import certStanford from '../assets/images/cert-stanford.jpg'
 import certBcgx from '../assets/images/cert-bcgx.jpg'
 import certKivro from '../assets/images/cert-kivro.jpg'
+import certAdvancedAlgorithms from '../assets/images/cert-advanced-learning-algorithms.jpg'
 
 export interface Certification {
   title: string
@@ -21,6 +22,11 @@ export const certifications: Certification[] = [
     title: 'Supervised Machine Learning: Regression & Classification',
     issuer: 'DeepLearning.AI & Stanford Online',
     image: certStanford,
+  },
+  {
+    title: 'Advanced Learning Algorithms',
+    issuer: 'DeepLearning.AI & Stanford Online',
+    image: certAdvancedAlgorithms,
   },
   {
     title: 'Data Science Job Simulation',
