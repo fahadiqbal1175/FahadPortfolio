@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 import FadeIn from '../components/FadeIn'
 import ContactButton from '../components/ContactButton'
 import Magnet from '../components/Magnet'
-import avatarImg from '../assets/images/fahad-avatar-new.png'
+import avatarImg from '../assets/images/fahad-avatar-better-green.jpeg'
 
 export default function HeroSection() {
   return (
