@@ -2,12 +2,7 @@ import type { ProjectVisualVariant } from '../data/projects'
 
 interface ProjectVisualProps {
   variant: ProjectVisualVariant
-}
-
-const visualLabels: Record<ProjectVisualVariant, string> = {
-  medilens: 'MediLens medical visual',
-  movielens: 'MovieLens Recommender film visual',
-  wellpulse: 'WellPulse wellbeing visual',
+  name: string
 }
 
 function MediLensVisual() {
@@ -62,7 +57,7 @@ function WellPulseVisual() {
   )
 }
 
-export default function ProjectVisual({ variant }: ProjectVisualProps) {
+export default function ProjectVisual({ variant, name }: ProjectVisualProps) {
   const visual = {
     medilens: <MediLensVisual />,
     movielens: <MovieLensVisual />,
@@ -72,7 +67,7 @@ export default function ProjectVisual({ variant }: ProjectVisualProps) {
   return (
     <div
       role="img"
-      aria-label={visualLabels[variant]}
+      aria-label={`${name} project visual`}
       className={`group relative isolate mx-auto flex aspect-[4/3] w-full max-w-2xl items-center justify-center overflow-hidden rounded-[28px] border border-[#D7E2EA]/15 ${
         variant === 'medilens'
           ? 'bg-gradient-to-br from-[#168D78] via-[#116B63] to-[#092D35]'
@@ -83,6 +78,9 @@ export default function ProjectVisual({ variant }: ProjectVisualProps) {
     >
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-white/10 via-transparent to-black/25" />
       <div className="transition-transform duration-500 group-hover:scale-105">{visual}</div>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 via-black/45 to-transparent px-4 pb-4 pt-12 sm:px-6 sm:pb-5">
+        <span className="block max-w-full break-words text-center text-lg font-black leading-tight text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.9)] sm:text-2xl">{name}</span>
+      </div>
     </div>
   )
 }
