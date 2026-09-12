@@ -35,7 +35,7 @@ export default function AboutSection() {
       {/* Center Content */}
       <div className="flex flex-col items-center w-full">
         <FadeIn delay={0} y={40}>
-          <h2 className="hero-heading font-black uppercase text-center tracking-tight leading-none" style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}>
+          <h2 className="section-heading hero-heading font-black uppercase text-center tracking-tight leading-none">
             ABOUT ME
           </h2>
         </FadeIn>
@@ -43,8 +43,7 @@ export default function AboutSection() {
         <div className="flex flex-col items-center gap-10 sm:gap-14 md:gap-16 w-full mt-10 sm:mt-14 md:mt-16">
           <AnimatedText 
             text="I'm an AI/ML engineer focused on building practical, deployable AI systems across computer vision, recommender systems, and applied NLP. I combine machine learning with full-stack engineering to take ideas from model development to real, user-facing applications. Let's build something intelligent together!" 
-            className="text-[#D7E2EA] font-medium text-center leading-relaxed max-w-[560px]"
-            style={{ fontSize: 'clamp(1rem, 2vw, 1.35rem)' }}
+            className="body-copy-lg text-[#D7E2EA] font-medium text-center leading-8 max-w-[62ch]"
           />
 
           <div className="mt-16 sm:mt-20 md:mt-24">

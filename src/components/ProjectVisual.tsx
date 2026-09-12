@@ -68,7 +68,7 @@ export default function ProjectVisual({ variant, name }: ProjectVisualProps) {
     <div
       role="img"
       aria-label={`${name} project visual`}
-      className={`group relative isolate mx-auto flex aspect-[4/3] w-full max-w-2xl items-center justify-center overflow-hidden rounded-[28px] border border-[#D7E2EA]/15 ${
+      className={`group relative isolate mx-auto flex aspect-[4/3] w-full max-w-2xl items-center justify-center overflow-hidden rounded-card border border-[#D7E2EA]/15 ${
         variant === 'medilens'
           ? 'bg-gradient-to-br from-[#168D78] via-[#116B63] to-[#092D35]'
           : variant === 'movielens'
