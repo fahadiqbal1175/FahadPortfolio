@@ -8,8 +8,7 @@ export default function EducationSection() {
     >
       <FadeIn y={40}>
         <h2
-          className="hero-heading font-black uppercase text-center mb-16 sm:mb-20 md:mb-28"
-          style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
+          className="section-heading hero-heading font-black uppercase text-center mb-16 sm:mb-20 md:mb-28"
         >
           EDUCATION
         </h2>
@@ -17,13 +16,13 @@ export default function EducationSection() {
 
       <div className="max-w-4xl mx-auto">
         <FadeIn delay={0.15} y={30}>
-          <article className="relative overflow-hidden rounded-[32px] sm:rounded-[44px] border-2 border-[#D7E2EA]/20 bg-[#D7E2EA]/5 p-7 sm:p-10 md:p-14">
+          <article className="relative overflow-hidden rounded-card border-2 border-[#D7E2EA]/20 bg-[#D7E2EA]/5 p-7 sm:p-10 md:p-14">
             <div className="absolute -right-16 -top-20 h-48 w-48 rounded-full border border-[#52E2B1]/20" />
             <div className="absolute -right-6 -top-10 h-28 w-28 rounded-full border border-[#47C8FF]/20" />
 
             <div className="relative flex flex-col gap-8 sm:gap-10">
               <div className="flex flex-col gap-3">
-                <h3 className="max-w-3xl text-2xl font-medium uppercase leading-tight text-[#D7E2EA] sm:text-4xl md:text-5xl">
+                <h3 className="max-w-3xl text-2xl font-medium leading-tight text-[#D7E2EA] sm:text-4xl md:text-5xl">
                   Bachelor of Science in Information Technology (BSIT)
                 </h3>
               </div>

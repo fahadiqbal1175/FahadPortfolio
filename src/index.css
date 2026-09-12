@@ -16,6 +16,21 @@ html, body, #root {
   overflow-x: clip;
 }
 
+:root {
+  --text-label: clamp(0.75rem, 1vw, 0.875rem);
+  --text-body: clamp(1rem, 1.25vw, 1.125rem);
+  --text-body-lg: clamp(1.125rem, 1.8vw, 1.35rem);
+  --text-section-heading: clamp(3rem, 8vw, 112px);
+  --text-hero-subtitle: clamp(0.75rem, 1.5vw, 1.2rem);
+  --text-hero-support: clamp(0.875rem, 1.4vw, 1.35rem);
+  --text-skill-number: clamp(3rem, 10vw, 140px);
+  --text-skill-title: clamp(1rem, 2.2vw, 2.1rem);
+  --text-skill-body: clamp(0.875rem, 1.6vw, 1.25rem);
+  --radius-surface: 40px;
+  --radius-card: 32px;
+  --radius-control: 12px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -23,6 +38,30 @@ html {
 body {
   min-width: 320px;
   line-height: 1.6;
+}
+
+.section-heading {
+  font-size: var(--text-section-heading);
+}
+
+.body-copy {
+  font-size: var(--text-body);
+}
+
+.body-copy-lg {
+  font-size: var(--text-body-lg);
+}
+
+.rounded-surface {
+  border-radius: var(--radius-surface);
+}
+
+.rounded-card {
+  border-radius: var(--radius-card);
+}
+
+.rounded-control {
+  border-radius: var(--radius-control);
 }
 
 /* Gradient heading text | same technique as Jack's .hero-heading */

@@ -12,12 +12,12 @@ export default function HeroSection() {
       <Navbar />
 
       {/* Main content: flex-1, relative for portrait positioning */}
-      <div className="flex-1 relative flex flex-col justify-between px-6 md:px-10">
+      <div className="flex-1 relative flex flex-col justify-between px-6 pt-24 sm:pt-28 md:px-10 md:pt-32">
         
         {/* Massive heading */}
         <FadeIn delay={0.15} y={40}>
           <div className="overflow-hidden">
-            <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[14vw] sm:text-[15vw] md:text-[16vw] lg:text-[17vw] mt-6 sm:mt-4 md:-mt-5">
+            <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[14vw] sm:text-[15vw] md:text-[16vw] lg:text-[17vw] mt-6 sm:mt-4">
               HI, I&apos;M FAHAD
             </h1>
           </div>
@@ -25,15 +25,15 @@ export default function HeroSection() {
 
         {/* Subtitle */}
         <FadeIn delay={0.25} y={20}>
-          <p className="text-[#52E2B1] uppercase tracking-[0.3em] font-medium" style={{ fontSize: 'clamp(0.7rem, 1.5vw, 1.2rem)' }}>
+          <p className="text-[#52E2B1] tracking-[0.3em] font-medium" style={{ fontSize: 'var(--text-hero-subtitle)' }}>
             AI / ML Engineer
           </p>
         </FadeIn>
 
         {/* Bottom bar */}
-        <div className="flex justify-between items-end pb-7 sm:pb-8 md:pb-10">
+        <div className="flex flex-col items-start gap-5 pb-7 sm:flex-row sm:items-end sm:gap-10 sm:pb-8 md:gap-14 md:pb-10">
           <FadeIn delay={0.35} y={20}>
-            <p className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[160px] sm:max-w-[220px] md:max-w-[260px]" style={{ fontSize: 'clamp(0.75rem, 1.4vw, 1.5rem)' }}>
+            <p className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[220px] md:max-w-[260px]" style={{ fontSize: 'var(--text-hero-support)' }}>
               building practical AI systems, from computer vision to deployed recommendation engines
             </p>
           </FadeIn>
@@ -49,7 +49,7 @@ export default function HeroSection() {
             <img
               src={avatarImg}
               alt="Fahad Iqbal | AI/ML Engineer"
-              className="w-[260px] sm:w-[340px] md:w-[420px] lg:w-[500px] rounded-2xl object-cover"
+              className="w-[260px] sm:w-[340px] md:w-[420px] lg:w-[500px] rounded-card object-cover"
               style={{ filter: 'drop-shadow(0 0 40px rgba(82, 226, 177, 0.15))' }}
             />
           </Magnet>

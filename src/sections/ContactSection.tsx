@@ -7,8 +7,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="bg-[#0A0F0D] px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32">
       <h2 
-        className="hero-heading font-black uppercase text-center mb-16 sm:mb-20 md:mb-28" 
-        style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
+        className="section-heading hero-heading font-black uppercase text-center mb-16 sm:mb-20 md:mb-28"
       >
         LET'S CONNECT
       </h2>
@@ -16,7 +15,7 @@ export default function ContactSection() {
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left Column - Terminal */}
         <FadeIn delay={0}>
-          <div className="rounded-[30px] border-2 border-[#D7E2EA]/20 bg-[#0D1411] overflow-hidden">
+          <div className="rounded-card border-2 border-[#D7E2EA]/20 bg-[#0D1411] overflow-hidden">
             <div className="flex items-center gap-2 px-4 py-3 bg-black/30 border-b border-[#D7E2EA]/10">
               <div className="flex gap-2">
                 <span className="w-3 h-3 rounded-full bg-red-500"></span>

@@ -30,13 +30,13 @@ function ProjectCard({ project }: { project: Project }) {
   const y = useTransform(scrollYProgress, [0, 1], [24, 0])
 
   return (
-    <motion.article ref={containerRef} style={{ y }} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }} className="grid gap-5 rounded-[36px] border-2 border-[#D7E2EA]/20 bg-[#0A0F0D] p-4 sm:gap-7 sm:p-6 md:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] md:items-center md:p-8">
+    <motion.article ref={containerRef} style={{ y }} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }} className="grid gap-5 rounded-card border-2 border-[#D7E2EA]/20 bg-[#0A0F0D] p-4 sm:gap-7 sm:p-6 md:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] md:items-center md:p-8">
       <ProjectCardVisual project={project} />
       <div className="flex min-w-0 h-full flex-col justify-between gap-8 p-1 sm:p-3">
         <div>
           <div className="mb-5 flex items-center justify-between gap-4">
             <span className="font-mono text-sm tracking-[0.18em] text-[#52E2B1]">{project.number}</span>
-            <span className="max-w-[16rem] text-right text-xs uppercase tracking-[0.16em] text-[#D7E2EA]/50 break-words">{project.category}</span>
+            <span className="max-w-[16rem] text-right text-xs tracking-[0.16em] text-[#D7E2EA]/50 break-words">{project.category}</span>
           </div>
           <h3 className="max-w-full break-words text-3xl font-bold uppercase leading-tight text-[#D7E2EA] sm:text-4xl">{project.name}</h3>
           <p className="mt-4 max-w-prose text-base leading-7 text-[#D7E2EA]/65">{project.description}</p>
@@ -92,8 +92,8 @@ export function ProjectDetail({ project }: { project: Project }) {
             <p className="mt-6 max-w-prose text-lg leading-8 text-[#D7E2EA]/70">{project.description}</p>
             <div className="mt-8"><ProjectLinks project={project} /></div>
           </div>
-          <div className="min-w-0 max-w-full overflow-hidden rounded-[32px] border-2 border-[#D7E2EA]/20 bg-[#0A0F0D] p-3 sm:p-5">
-            <div className="aspect-video max-w-full overflow-hidden rounded-[24px] border border-[#D7E2EA]/10">
+          <div className="min-w-0 max-w-full overflow-hidden rounded-card border-2 border-[#D7E2EA]/20 bg-[#0A0F0D] p-3 sm:p-5">
+            <div className="aspect-video max-w-full overflow-hidden rounded-control border border-[#D7E2EA]/10">
               <SelectedMedia media={project.media} />
             </div>
           </div>
@@ -111,5 +111,5 @@ export function ProjectDetail({ project }: { project: Project }) {
 }
 
 export default function ProjectsSection() {
-  return <section id="projects" className="relative z-10 -mt-10 rounded-t-[40px] bg-[#0A0F0D] px-5 py-20 sm:-mt-12 sm:rounded-t-[50px] sm:px-8 sm:py-24 md:-mt-14 md:rounded-t-[60px] md:px-10 md:py-32"><h2 className="hero-heading mb-16 text-center font-black uppercase sm:mb-20 md:mb-28" style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}>PROJECTS</h2><div className="mx-auto grid max-w-6xl gap-6">{projects.map((project) => <ProjectCard key={project.slug} project={project} />)}</div></section>
+  return <section id="projects" className="relative z-10 -mt-10 rounded-surface bg-[#0A0F0D] px-5 py-20 sm:-mt-12 sm:px-8 sm:py-24 md:-mt-14 md:px-10 md:py-32"><h2 className="section-heading hero-heading mb-16 text-center font-black uppercase sm:mb-20 md:mb-28">PROJECTS</h2><div className="mx-auto grid max-w-6xl gap-6">{projects.map((project) => <ProjectCard key={project.slug} project={project} />)}</div></section>
 }
