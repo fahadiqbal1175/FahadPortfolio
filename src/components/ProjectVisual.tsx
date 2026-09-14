@@ -78,8 +78,8 @@ export default function ProjectVisual({ variant, name }: ProjectVisualProps) {
     >
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-white/10 via-transparent to-black/25" />
       <div className="transition-transform duration-500 group-hover:scale-105">{visual}</div>
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 via-black/45 to-transparent px-4 pb-4 pt-12 sm:px-6 sm:pb-5">
-        <span className="block max-w-full break-words text-center text-lg font-black leading-tight text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.9)] sm:text-2xl">{name}</span>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 via-black/45 to-transparent px-4 pb-5 pt-14 sm:px-6 sm:pb-5">
+        <span className="block max-w-full break-words text-center text-lg font-black leading-snug text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.9)] sm:text-2xl">{name}</span>
       </div>
     </div>
   )

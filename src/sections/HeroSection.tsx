@@ -12,7 +12,7 @@ export default function HeroSection() {
       <Navbar />
 
       {/* Main content: flex-1, relative for portrait positioning */}
-      <div className="flex-1 relative flex flex-col justify-between px-6 pt-24 sm:pt-28 md:px-10 md:pt-32">
+      <div className="flex-1 relative flex flex-col justify-between px-6 pt-28 sm:pt-32 md:px-10 md:pt-36">
         
         {/* Massive heading */}
         <FadeIn delay={0.15} y={40}>
@@ -25,7 +25,7 @@ export default function HeroSection() {
 
         {/* Subtitle */}
         <FadeIn delay={0.25} y={20}>
-          <p className="text-[#52E2B1] tracking-[0.3em] font-medium" style={{ fontSize: 'var(--text-hero-subtitle)' }}>
+          <p className="text-[#52E2B1] tracking-[0.3em] font-medium" style={{ fontSize: 'var(--text-sm)' }}>
             AI / ML Engineer
           </p>
         </FadeIn>
@@ -33,18 +33,18 @@ export default function HeroSection() {
         {/* Bottom bar */}
         <div className="flex flex-col items-start gap-5 pb-7 sm:flex-row sm:items-end sm:gap-10 sm:pb-8 md:gap-14 md:pb-10">
           <FadeIn delay={0.35} y={20}>
-            <p className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[220px] md:max-w-[260px]" style={{ fontSize: 'var(--text-hero-support)' }}>
+            <p className="text-[#D7E2EA] font-light tracking-normal leading-snug max-w-[220px] md:max-w-[260px]" style={{ fontSize: 'var(--text-base)' }}>
               building practical AI systems, from computer vision to deployed recommendation engines
             </p>
           </FadeIn>
 
-          <FadeIn delay={0.5} y={20}>
+          <FadeIn delay={0.5} y={20} className="self-start">
             <ContactButton />
           </FadeIn>
         </div>
 
         {/* Centered magnetic portrait */}
-        <FadeIn delay={0.6} y={30} className="absolute left-1/2 -translate-x-1/2 z-10 top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 pointer-events-auto">
+        <FadeIn delay={0.6} y={30} className="absolute left-1/2 -translate-x-1/2 z-0 top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 pointer-events-auto">
           <Magnet padding={120} strength={3}>
             <img
               src={avatarImg}
