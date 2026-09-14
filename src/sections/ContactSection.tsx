@@ -31,19 +31,19 @@ export default function ContactSection() {
               <div className="mt-2">
                 <span className="text-[#52E2B1]">$ </span>
                 <span className="text-[#D7E2EA]">echo $EMAIL</span>
-                <p className="text-[#D7E2EA]/80 mt-1">hafizfahad1175@gmail.com</p>
+                <p className="text-[#D7E2EA] font-medium mt-1">hafizfahad1175@gmail.com</p>
               </div>
               
               <div className="mt-4">
                 <span className="text-[#52E2B1]">$ </span>
                 <span className="text-[#D7E2EA]">echo $GITHUB</span>
-                <p className="text-[#D7E2EA]/80 mt-1">github.com/fahadiqbal1175</p>
+                <p className="text-[#D7E2EA] font-medium mt-1">github.com/fahadiqbal1175</p>
               </div>
               
               <div className="mt-4">
                 <span className="text-[#52E2B1]">$ </span>
                 <span className="text-[#D7E2EA]">echo $LINKEDIN</span>
-                <p className="text-[#D7E2EA]/80 mt-1">linkedin.com/in/fahad-iqbal-dev</p>
+                <p className="text-[#D7E2EA] font-medium mt-1">linkedin.com/in/fahad-iqbal-dev</p>
               </div>
               
               <div className="mt-4">
@@ -64,19 +64,19 @@ export default function ContactSection() {
             
             <ContactButton />
             
-            <div className="flex gap-6 items-center">
-              <a href="https://github.com/fahadiqbal1175" target="_blank" rel="noopener noreferrer" className="text-[#D7E2EA]/60 hover:text-[#52E2B1] transition-colors">
-                <Github size={24} />
+            <div className="flex gap-4 items-center">
+              <a href="https://github.com/fahadiqbal1175" target="_blank" rel="noopener noreferrer" className="p-2 text-[#D7E2EA]/60 hover:text-[#52E2B1] transition-colors">
+                <Github size={28} />
               </a>
-              <a href="https://linkedin.com/in/fahad-iqbal-dev" target="_blank" rel="noopener noreferrer" className="text-[#D7E2EA]/60 hover:text-[#52E2B1] transition-colors">
-                <Linkedin size={24} />
+              <a href="https://linkedin.com/in/fahad-iqbal-dev" target="_blank" rel="noopener noreferrer" className="p-2 text-[#D7E2EA]/60 hover:text-[#52E2B1] transition-colors">
+                <Linkedin size={28} />
               </a>
-              <a href="mailto:hafizfahad1175@gmail.com" className="text-[#D7E2EA]/60 hover:text-[#52E2B1] transition-colors">
-                <Mail size={24} />
+              <a href="mailto:hafizfahad1175@gmail.com" className="p-2 text-[#D7E2EA]/60 hover:text-[#52E2B1] transition-colors">
+                <Mail size={28} />
               </a>
             </div>
             
-            <a href="/assets/documents/Fahad_Iqbal_Resume.pdf" download className="text-[#D7E2EA]/60 text-sm font-mono hover:text-[#52E2B1] transition-colors">
+            <a href="/assets/documents/Fahad_Iqbal_Resume.pdf" download className="text-[#D7E2EA]/75 text-base font-mono font-medium hover:text-[#52E2B1] transition-colors">
               ↓ Download Resume
             </a>
           </div>

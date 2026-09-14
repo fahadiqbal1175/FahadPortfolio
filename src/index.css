@@ -1,4 +1,4 @@
-﻿@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -17,15 +17,12 @@ html, body, #root {
 }
 
 :root {
-  --text-label: clamp(0.75rem, 1vw, 0.875rem);
-  --text-body: clamp(1rem, 1.25vw, 1.125rem);
-  --text-body-lg: clamp(1.125rem, 1.8vw, 1.35rem);
+  --text-sm: clamp(0.75rem, 1.2vw, 0.875rem);
+  --text-base: clamp(0.938rem, 1.4vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1.8vw, 1.35rem);
+  --text-xl: clamp(1rem, 2.2vw, 2.1rem);
   --text-section-heading: clamp(3rem, 8vw, 112px);
-  --text-hero-subtitle: clamp(0.75rem, 1.5vw, 1.2rem);
-  --text-hero-support: clamp(0.875rem, 1.4vw, 1.35rem);
   --text-skill-number: clamp(3rem, 10vw, 140px);
-  --text-skill-title: clamp(1rem, 2.2vw, 2.1rem);
-  --text-skill-body: clamp(0.875rem, 1.6vw, 1.25rem);
   --radius-surface: 40px;
   --radius-card: 32px;
   --radius-control: 12px;
@@ -45,11 +42,11 @@ body {
 }
 
 .body-copy {
-  font-size: var(--text-body);
+  font-size: var(--text-base);
 }
 
 .body-copy-lg {
-  font-size: var(--text-body-lg);
+  font-size: var(--text-lg);
 }
 
 .rounded-surface {

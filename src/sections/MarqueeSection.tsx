@@ -32,6 +32,7 @@ export default function MarqueeSection() {
     <section 
       ref={sectionRef} 
       className="bg-[#0A0F0D] pt-24 sm:pt-32 md:pt-40 pb-10 overflow-hidden flex flex-col gap-3"
+      aria-hidden="true"
     >
       {/* Row 1 */}
       <div 
@@ -44,7 +45,7 @@ export default function MarqueeSection() {
         {row1.map((label, index) => (
           <div 
             key={`r1-${index}`} 
-            className="flex-shrink-0 w-[320px] h-[200px] rounded-2xl bg-[#111A17] border border-[#52E2B1]/20 flex items-center justify-center relative overflow-hidden"
+            className="flex-shrink-0 w-[280px] h-[160px] rounded-2xl bg-[#111A17] border border-[#52E2B1]/20 flex items-center justify-center relative overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[#52E2B1]/5 to-[#47C8FF]/5" />
             <span className="text-[#D7E2EA] font-mono text-lg font-bold uppercase relative z-10">
@@ -65,7 +66,7 @@ export default function MarqueeSection() {
         {row2.map((label, index) => (
           <div 
             key={`r2-${index}`} 
-            className="flex-shrink-0 w-[320px] h-[200px] rounded-2xl bg-[#111A17] border border-[#52E2B1]/20 flex items-center justify-center relative overflow-hidden"
+            className="flex-shrink-0 w-[280px] h-[160px] rounded-2xl bg-[#111A17] border border-[#52E2B1]/20 flex items-center justify-center relative overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[#52E2B1]/5 to-[#47C8FF]/5" />
             <span className="text-[#D7E2EA] font-mono text-lg font-bold uppercase relative z-10">

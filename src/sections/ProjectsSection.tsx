@@ -16,7 +16,7 @@ function ProjectLinks({ project }: { project: Project }) {
   return (
     <div className="flex flex-wrap items-center gap-3">
       {project.links.map((link) => link.disabled ? (
-        <span key={link.label} aria-disabled="true" className="cursor-not-allowed rounded-full border-2 border-[#D7E2EA]/25 px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] text-[#D7E2EA]/40 sm:px-6 sm:py-3">{link.label}</span>
+        <span key={link.label} aria-disabled="true" className="cursor-not-allowed rounded-full border-2 border-[#D7E2EA]/25 px-5 py-3 text-xs font-bold tracking-[0.14em] text-[#D7E2EA]/40 sm:px-6 sm:py-3">{link.label}</span>
       ) : (
         <GhostButton key={link.label} href={link.href} label={link.label} className="px-5 py-3 text-xs sm:px-6 sm:py-3" />
       ))}
@@ -41,8 +41,8 @@ function ProjectCard({ project }: { project: Project }) {
           <h3 className="max-w-full break-words text-3xl font-bold uppercase leading-tight text-[#D7E2EA] sm:text-4xl">{project.name}</h3>
           <p className="mt-4 max-w-prose text-base leading-7 text-[#D7E2EA]/65">{project.description}</p>
         </div>
-        <div className="flex flex-wrap items-center gap-3">
-          <a href={`#project/${project.slug}`} className="rounded-full bg-[#52E2B1] px-5 py-3 text-sm font-bold uppercase tracking-[0.14em] text-[#0A0F0D] transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#52E2B1] focus:ring-offset-2 focus:ring-offset-[#0A0F0D]">View Details</a>
+        <div className="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+          <a href={`#project/${project.slug}`} className="rounded-full bg-[#52E2B1] px-6 py-3 text-sm sm:px-8 sm:py-3.5 sm:text-base font-bold uppercase tracking-[0.14em] text-[#0A0F0D] transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#52E2B1] focus:ring-offset-2 focus:ring-offset-[#0A0F0D]">View Details</a>
           <ProjectLinks project={project} />
         </div>
       </div>

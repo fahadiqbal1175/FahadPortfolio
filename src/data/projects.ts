@@ -135,7 +135,7 @@ export const projects: Project[] = [
     visualVariant: 'wellpulse',
     links: [
       { href: 'https://github.com/fahadiqbal1175/wellpulse_ml_project', label: 'GitHub' },
-      { label: 'Live Demo — Coming Soon', disabled: true },
+      { label: 'Coming Soon', disabled: true },
     ],
     media: {
       alt: 'WellPulse project artwork',

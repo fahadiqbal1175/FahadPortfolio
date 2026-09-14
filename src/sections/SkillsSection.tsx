@@ -21,14 +21,14 @@ export default function SkillsSection() {
               </div>
               <div className="flex flex-col gap-2">
                 <h3 
-                  className="font-medium uppercase text-[#0A0F0D]"
-                  style={{ fontSize: 'var(--text-skill-title)' }}
+                  className="font-medium text-[#0A0F0D]"
+                  style={{ fontSize: 'var(--text-xl)' }}
                 >
                   {skill.name}
                 </h3>
                 <p 
                   className="font-light text-[#0A0F0D] leading-relaxed max-w-2xl opacity-60"
-                  style={{ fontSize: 'var(--text-skill-body)' }}
+                  style={{ fontSize: 'var(--text-base)' }}
                 >
                   {skill.description}
                 </p>
