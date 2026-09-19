@@ -18,7 +18,20 @@ export default function App() {
   const [selectedProject, setSelectedProject] = useState(() => getProjectFromHash())
 
   useEffect(() => {
-    const handleHashChange = () => setSelectedProject(getProjectFromHash())
+    const handleHashChange = () => {
+      const project = getProjectFromHash()
+      setSelectedProject(project)
+
+      if (project) {
+        // Entering project detail: scroll to top so user sees the start
+        window.scrollTo(0, 0)
+      } else if (window.location.hash === '#projects') {
+        // Going back to projects: wait for DOM to render, then scroll to section
+        requestAnimationFrame(() => {
+          document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
+        })
+      }
+    }
     window.addEventListener('hashchange', handleHashChange)
     return () => window.removeEventListener('hashchange', handleHashChange)
   }, [])

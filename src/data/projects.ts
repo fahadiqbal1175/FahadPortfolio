@@ -127,7 +127,7 @@ export const projects: Project[] = [
   {
     slug: 'wellpulse',
     number: '03',
-    category: 'In Progress',
+    category: 'Solo Project',
     name: 'WellPulse',
     description: 'An ML-first wellbeing pipeline with explainable predictions and production-minded MLOps.',
     artwork: wellPulseArtwork,
@@ -135,12 +135,12 @@ export const projects: Project[] = [
     visualVariant: 'wellpulse',
     links: [
       { href: 'https://github.com/fahadiqbal1175/wellpulse_ml_project', label: 'GitHub' },
-      { label: 'Coming Soon', disabled: true },
+      { href: 'https://wellpulse.onrender.com/', label: 'Live Demo' },
+      { href: 'https://youtu.be/KpV7HCntpCE', label: 'Demo Video' },
     ],
     media: {
-      alt: 'WellPulse project artwork',
-      src: wellPulseArtwork,
-      mediaType: 'image',
+      alt: 'WellPulse demo video',
+      youtubeUrl: 'https://youtu.be/KpV7HCntpCE',
     },
     sections: {
       overview: 'WellPulse is an ML-first project that predicts a student\'s wellbeing/mental-health score from their social media usage and behavioral survey data — built with the rigor of a real MLOps pipeline rather than a single trained model.',

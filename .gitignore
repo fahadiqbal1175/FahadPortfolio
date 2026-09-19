@@ -6,6 +6,10 @@ node_modules/
 # Large media (host separately)
 public/assets/videos/
 
+# Temp/generated media
+ChatGPT*.png
+InShot*.mp4
+
 # Build
 dist/
 dist-ssr/
