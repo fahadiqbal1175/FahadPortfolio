@@ -52,9 +52,8 @@ export default function App() {
       <footer className="border-t border-[#D7E2EA]/10 bg-[#07100c] px-5 py-12 sm:px-8 sm:py-14 md:px-10">
         <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-[1.4fr_1fr_1fr] lg:gap-10">
           <div className="min-w-0">
-            <a href="#hero" className="inline-flex items-center gap-3 text-[#D7E2EA] focus:outline-none focus:ring-2 focus:ring-[#52E2B1]">
-              <span className="flex h-11 w-11 items-center justify-center rounded-full border border-[#52E2B1]/60 font-black text-[#52E2B1]" aria-hidden="true">FI</span>
-              <span className="font-semibold tracking-wide">Fahad Iqbal</span>
+            <a href="#hero" className="text-[#D7E2EA] font-semibold tracking-wide text-lg focus:outline-none focus:ring-2 focus:ring-[#52E2B1]">
+              Fahad Iqbal
             </a>
             <p className="mt-5 max-w-sm text-sm leading-7 text-[#D7E2EA]/65">AI/ML Engineer building practical, deployable systems.</p>
             <p className="mt-6 font-mono text-xs text-[#D7E2EA]/40">© {new Date().getFullYear()} Fahad Iqbal</p>

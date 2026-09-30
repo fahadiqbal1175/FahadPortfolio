@@ -42,12 +42,9 @@ const Navbar: React.FC = () => {
         <a
           href="#hero"
           onClick={(e) => handleSmoothScroll(e, 'hero')}
-          className="flex items-center gap-2 text-silver font-bold uppercase tracking-wider text-lg"
+          className="text-silver font-bold uppercase tracking-wider text-lg"
         >
-          <span className="w-9 h-9 flex items-center justify-center rounded-md border border-emerald/40 bg-gradient-to-br from-emerald/15 to-cyan/10 text-emerald font-mono font-black text-sm">
-            FI
-          </span>
-          <span className="hidden sm:inline">Fahad Iqbal</span>
+          Fahad Iqbal
         </a>
 
         {/* Desktop Menu */}
