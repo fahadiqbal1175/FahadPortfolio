@@ -3,6 +3,8 @@ import certStanford from '../assets/images/cert-stanford.jpg'
 import certBcgx from '../assets/images/cert-bcgx.jpg'
 import certKivro from '../assets/images/cert-kivro.jpg'
 import certAdvancedAlgorithms from '../assets/images/cert-advanced-learning-algorithms.jpg'
+import certUnsupervisedLearning from '../assets/images/cert-unsupervised-learning.jpg'
+import certMLSpecialization from '../assets/images/cert-ml-specialization.jpg'
 
 export interface Certification {
   title: string
@@ -12,6 +14,12 @@ export interface Certification {
 }
 
 export const certifications: Certification[] = [
+  {
+    title: 'Machine Learning Specialization',
+    issuer: 'DeepLearning.AI & Stanford Online',
+    code: '3-Course Specialization',
+    image: certMLSpecialization,
+  },
   {
     title: 'Microsoft Azure AI Fundamentals',
     issuer: 'Microsoft',
@@ -27,6 +35,11 @@ export const certifications: Certification[] = [
     title: 'Advanced Learning Algorithms',
     issuer: 'DeepLearning.AI & Stanford Online',
     image: certAdvancedAlgorithms,
+  },
+  {
+    title: 'Unsupervised Learning, Recommenders, Reinforcement Learning',
+    issuer: 'DeepLearning.AI & Stanford Online',
+    image: certUnsupervisedLearning,
   },
   {
     title: 'Data Science Job Simulation',
