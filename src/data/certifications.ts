@@ -1,7 +1,6 @@
 import certAzure from '../assets/images/cert-azure.jpg'
 import certStanford from '../assets/images/cert-stanford.jpg'
 import certBcgx from '../assets/images/cert-bcgx.jpg'
-import certKivro from '../assets/images/cert-kivro.jpg'
 import certAdvancedAlgorithms from '../assets/images/cert-advanced-learning-algorithms.jpg'
 import certUnsupervisedLearning from '../assets/images/cert-unsupervised-learning.jpg'
 import certMLSpecialization from '../assets/images/cert-ml-specialization.jpg'
@@ -45,11 +44,5 @@ export const certifications: Certification[] = [
     title: 'Data Science Job Simulation',
     issuer: 'BCG X / Forage',
     image: certBcgx,
-  },
-  {
-    title: 'Full Stack Development Internship',
-    issuer: 'Kivro Solutions',
-    code: 'Excellent Performer',
-    image: certKivro,
   },
 ]
